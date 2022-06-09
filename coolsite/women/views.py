@@ -1,6 +1,7 @@
 from django.http import HttpResponse, HttpResponseNotFound, Http404
 from django.shortcuts import render, redirect, get_object_or_404
 from django.views.generic import ListView
+from requests import request
 
 from .forms import *
 from .models import *
@@ -27,6 +28,10 @@ class WomenHome(ListView):
     
     def get_queryset(self):
         return Women.objects.filter(is_published=True)
+
+
+def aphtor_page(request):
+    return render(request, 'women/aphtor.html')
 
 
 # def index(request):

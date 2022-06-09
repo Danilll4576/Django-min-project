@@ -1,0 +1,15 @@
+{% extends 'women/base.html' %}
+<p>Текст 1</p>
+{% block content %}
+
+<h2 style='color: maroon;'>Я уже в интернете</h2>
+<ul>
+    <li>Так сказать первый шаг зделан</li>
+    <li>Могу зделать личное облоко</li>
+    <li>Не пережевать за тайную переписку</li>
+    <li>Через YasyPay что то автоматом продавать</li>
+</ul>
+
+
+{{post.content|linebreaks}}
+{% endblock %}
